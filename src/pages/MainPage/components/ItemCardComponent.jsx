@@ -1,4 +1,3 @@
-import { useMemo } from "react";
 import { CircleButton, CircleImage } from "../../../components";
 import {
   ButtonSection,
@@ -20,18 +19,6 @@ export const ItemCardComponent = ({
   id,
   createdAt,
 }) => {
-  const heartCount = useMemo(() => {
-    return Math.floor(Math.random() * 99).toLocaleString();
-  }, []);
-
-  const bookmarkCount = useMemo(() => {
-    return Math.floor(Math.random() * 20).toLocaleString();
-  }, []);
-
-  const commentCount = useMemo(() => {
-    return Math.floor(Math.random() * 40).toLocaleString();
-  }, []);
-
   return (
     <StyledGrid>
       <FlexBox>
@@ -56,7 +43,7 @@ export const ItemCardComponent = ({
             isShadow={false}
             color="#424242"
           />
-          <p style={{ marginLeft: "-4px" }}>{heartCount}</p>
+          <p style={{ marginLeft: "-4px" }}>{Math.floor(Math.random() * 99)}</p>
         </ButtonWrapper>
         <ButtonWrapper>
           <CircleButton
@@ -65,7 +52,7 @@ export const ItemCardComponent = ({
             isShadow={false}
             color="#424242"
           />
-          <p style={{ marginLeft: "-4px" }}>{bookmarkCount}</p>
+          <p style={{ marginLeft: "-4px" }}>{Math.floor(Math.random() * 20)}</p>
         </ButtonWrapper>
         <ButtonWrapper>
           <CircleButton
@@ -74,7 +61,7 @@ export const ItemCardComponent = ({
             isShadow={false}
             color="#424242"
           />
-          <p style={{ marginLeft: "-4px" }}>{commentCount}</p>
+          <p style={{ marginLeft: "-4px" }}>{Math.floor(Math.random() * 40)}</p>
         </ButtonWrapper>
       </ButtonSection>
     </StyledGrid>
